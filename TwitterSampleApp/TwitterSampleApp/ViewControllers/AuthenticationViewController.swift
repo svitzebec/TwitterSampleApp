@@ -13,9 +13,7 @@ class AuthenticationViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-	}
 
-	override func viewWillAppear(animated: Bool) {
 		setUpLoginButton()
 	}
 
@@ -23,6 +21,10 @@ class AuthenticationViewController: UIViewController {
 		let logInButton = TWTRLogInButton(logInCompletion: { session, error in
 			if let session = session {
 				print("signed in as \(session.userName)")
+
+				DataAccessHandler.shared.apiClient = TWTRAPIClient(userID: session.userID)
+
+				self.showTwitterFeed()
 			} else {
 				print("error: \(error?.localizedDescription)")
 			}
@@ -30,6 +32,14 @@ class AuthenticationViewController: UIViewController {
 
 		logInButton.center = self.view.center
 		self.view.addSubview(logInButton)
+	}
+
+	private func showTwitterFeed() {
+		let twitterHomeViewController = TwitterHomeViewController()
+		let navigationController = UINavigationController(rootViewController: twitterHomeViewController)
+		navigationController.title = "Home feed"
+
+		presentViewController(navigationController, animated: true, completion: nil)
 	}
 
 }

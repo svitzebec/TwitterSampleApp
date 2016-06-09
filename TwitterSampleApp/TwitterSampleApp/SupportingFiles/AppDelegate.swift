@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-	private let twitterConsumerKey = "ETYEyVq3JmRWljSn59gQ6l1pr"
-	private let twitterSecret = "opWxrGN1T8qPRMYF3iFiDZPGNiLmYrrQGWfUHfVKSaaY8YioYf"
+	private let twitterConsumerKey = "L3ETWtB1freBItqyoc2OwPV85"
+	private let twitterSecret = "YxSqhjTIsbrzZAnUGikExoYjeSbd6CQ0isgIJUlKakloeizDkm"
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
