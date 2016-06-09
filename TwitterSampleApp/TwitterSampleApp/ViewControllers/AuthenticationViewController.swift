@@ -23,6 +23,8 @@ class AuthenticationViewController: UIViewController {
 		let logInButton = TWTRLogInButton(logInCompletion: { session, error in
 			if let session = session {
 				print("signed in as \(session.userName)")
+
+				self.showTwitterFeed(session.userID)
 			} else {
 				print("error: \(error?.localizedDescription)")
 			}
@@ -30,6 +32,15 @@ class AuthenticationViewController: UIViewController {
 
 		logInButton.center = self.view.center
 		self.view.addSubview(logInButton)
+	}
+
+	private func showTwitterFeed(userID: String) {
+//		let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//		let twitterFeedViewController = mainStoryboard.instantiateViewControllerWithIdentifier("TwitterFeedViewController")
+
+		let twitterFeedViewController = TwitterFeedViewController(userID: userID)
+
+		presentViewController(twitterFeedViewController, animated: true, completion: nil)
 	}
 
 }
