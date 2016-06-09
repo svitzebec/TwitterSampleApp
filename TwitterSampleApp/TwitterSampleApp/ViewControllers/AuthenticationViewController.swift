@@ -13,9 +13,7 @@ class AuthenticationViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-	}
 
-	override func viewWillAppear(animated: Bool) {
 		setUpLoginButton()
 	}
 
@@ -38,8 +36,10 @@ class AuthenticationViewController: UIViewController {
 
 	private func showTwitterFeed() {
 		let twitterHomeViewController = TwitterHomeViewController()
+		let navigationController = UINavigationController(rootViewController: twitterHomeViewController)
+		navigationController.title = "Home feed"
 
-		presentViewController(twitterHomeViewController, animated: true, completion: nil)
+		presentViewController(navigationController, animated: true, completion: nil)
 	}
 
 }
