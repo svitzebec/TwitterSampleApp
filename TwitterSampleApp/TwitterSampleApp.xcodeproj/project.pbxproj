@@ -13,10 +13,10 @@
 		E2B0F4511D09561B00F8C5EE /* TwitterSampleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2B0F44F1D09561B00F8C5EE /* TwitterSampleApp.xcdatamodeld */; };
 		E2B0F4531D09561B00F8C5EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B0F4521D09561B00F8C5EE /* Assets.xcassets */; };
 		E2B0F4561D09561B00F8C5EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2B0F4541D09561B00F8C5EE /* LaunchScreen.storyboard */; };
-		E2B0F4621D09584200F8C5EE /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B0F45E1D09584200F8C5EE /* Fabric.framework */; };
-		E2B0F4631D09584200F8C5EE /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B0F45F1D09584200F8C5EE /* TwitterKit.framework */; };
 		E2B0F4641D09584200F8C5EE /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2B0F4601D09584200F8C5EE /* TwitterKitResources.bundle */; };
-		E2B0F4651D09584200F8C5EE /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B0F4611D09584200F8C5EE /* TwitterCore.framework */; };
+		E2B0F47D1D0968B400F8C5EE /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B0F45E1D09584200F8C5EE /* Fabric.framework */; };
+		E2B0F47E1D0968B400F8C5EE /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B0F4611D09584200F8C5EE /* TwitterCore.framework */; };
+		E2B0F47F1D0968B400F8C5EE /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B0F45F1D09584200F8C5EE /* TwitterKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2B0F4621D09584200F8C5EE /* Fabric.framework in Frameworks */,
-				E2B0F4651D09584200F8C5EE /* TwitterCore.framework in Frameworks */,
-				E2B0F4631D09584200F8C5EE /* TwitterKit.framework in Frameworks */,
+				E2B0F47D1D0968B400F8C5EE /* Fabric.framework in Frameworks */,
+				E2B0F47E1D0968B400F8C5EE /* TwitterCore.framework in Frameworks */,
+				E2B0F47F1D0968B400F8C5EE /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +51,8 @@
 		E2B0F43C1D09561B00F8C5EE = {
 			isa = PBXGroup;
 			children = (
-				E2B0F4471D09561B00F8C5EE /* TwitterSampleApp */,
 				E2B0F4461D09561B00F8C5EE /* Products */,
+				E2B0F4471D09561B00F8C5EE /* TwitterSampleApp */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,19 +67,75 @@
 		E2B0F4471D09561B00F8C5EE /* TwitterSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				E2B0F45E1D09584200F8C5EE /* Fabric.framework */,
-				E2B0F45F1D09584200F8C5EE /* TwitterKit.framework */,
-				E2B0F4601D09584200F8C5EE /* TwitterKitResources.bundle */,
-				E2B0F4611D09584200F8C5EE /* TwitterCore.framework */,
-				E2B0F4481D09561B00F8C5EE /* AppDelegate.swift */,
-				E2B0F44A1D09561B00F8C5EE /* AuthenticationViewController.swift */,
-				E2B0F44C1D09561B00F8C5EE /* Main.storyboard */,
-				E2B0F4521D09561B00F8C5EE /* Assets.xcassets */,
-				E2B0F4541D09561B00F8C5EE /* LaunchScreen.storyboard */,
-				E2B0F4571D09561B00F8C5EE /* Info.plist */,
-				E2B0F44F1D09561B00F8C5EE /* TwitterSampleApp.xcdatamodeld */,
+				E2B0F47C1D09674300F8C5EE /* CodeData */,
+				E2B0F4741D0966B700F8C5EE /* Frameworks */,
+				E2B0F4771D0966F800F8C5EE /* Resources */,
+				E2B0F4751D0966CE00F8C5EE /* SupportingFiles */,
+				E2B0F4761D0966DB00F8C5EE /* ViewControllers */,
 			);
 			path = TwitterSampleApp;
+			sourceTree = "<group>";
+		};
+		E2B0F4741D0966B700F8C5EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2B0F45E1D09584200F8C5EE /* Fabric.framework */,
+				E2B0F4611D09584200F8C5EE /* TwitterCore.framework */,
+				E2B0F45F1D09584200F8C5EE /* TwitterKit.framework */,
+				E2B0F4601D09584200F8C5EE /* TwitterKitResources.bundle */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2B0F4751D0966CE00F8C5EE /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E2B0F4481D09561B00F8C5EE /* AppDelegate.swift */,
+				E2B0F4571D09561B00F8C5EE /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E2B0F4761D0966DB00F8C5EE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2B0F44A1D09561B00F8C5EE /* AuthenticationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E2B0F4771D0966F800F8C5EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2B0F47A1D09672800F8C5EE /* Assets */,
+				E2B0F4781D09670A00F8C5EE /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E2B0F4781D09670A00F8C5EE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E2B0F4541D09561B00F8C5EE /* LaunchScreen.storyboard */,
+				E2B0F44C1D09561B00F8C5EE /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E2B0F47A1D09672800F8C5EE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E2B0F4521D09561B00F8C5EE /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E2B0F47C1D09674300F8C5EE /* CodeData */ = {
+			isa = PBXGroup;
+			children = (
+				E2B0F44F1D09561B00F8C5EE /* TwitterSampleApp.xcdatamodeld */,
+			);
+			path = CodeData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +242,7 @@
 				E2B0F44D1D09561B00F8C5EE /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		E2B0F4541D09561B00F8C5EE /* LaunchScreen.storyboard */ = {
@@ -194,6 +251,7 @@
 				E2B0F4551D09561B00F8C5EE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -289,8 +347,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TwitterSampleApp",
+					"$(PROJECT_DIR)/TwitterSampleApp/Frameworks",
 				);
-				INFOPLIST_FILE = TwitterSampleApp/Info.plist;
+				INFOPLIST_FILE = TwitterSampleApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = svitzebec.TwitterSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,8 +363,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TwitterSampleApp",
+					"$(PROJECT_DIR)/TwitterSampleApp/Frameworks",
 				);
-				INFOPLIST_FILE = TwitterSampleApp/Info.plist;
+				INFOPLIST_FILE = TwitterSampleApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = svitzebec.TwitterSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -331,6 +391,7 @@
 				E2B0F45C1D09561B00F8C5EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
