@@ -39,7 +39,7 @@ class DataAccessHandler {
 			}
 
 			do {
-				guard let response = response, let data = data else {
+				guard let _ = response, let data = data else {
 					print("Problem with obtaining feed.")
 					completion(fetchedTweets: nil)
 					return

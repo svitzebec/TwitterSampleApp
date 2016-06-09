@@ -24,7 +24,9 @@ class AuthenticationViewController: UIViewController {
 			if let session = session {
 				print("signed in as \(session.userName)")
 
-				self.showTwitterFeed(session.userID)
+				DataAccessHandler.shared.apiClient = TWTRAPIClient(userID: session.userID)
+
+				self.showTwitterFeed()
 			} else {
 				print("error: \(error?.localizedDescription)")
 			}
@@ -34,13 +36,10 @@ class AuthenticationViewController: UIViewController {
 		self.view.addSubview(logInButton)
 	}
 
-	private func showTwitterFeed(userID: String) {
-//		let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//		let twitterFeedViewController = mainStoryboard.instantiateViewControllerWithIdentifier("TwitterFeedViewController")
+	private func showTwitterFeed() {
+		let twitterHomeViewController = TwitterHomeViewController()
 
-		let twitterFeedViewController = TwitterFeedViewController(userID: userID)
-
-		presentViewController(twitterFeedViewController, animated: true, completion: nil)
+		presentViewController(twitterHomeViewController, animated: true, completion: nil)
 	}
 
 }
