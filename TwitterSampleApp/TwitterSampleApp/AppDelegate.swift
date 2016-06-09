@@ -16,11 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
+	private let twitterConsumerKey = "ETYEyVq3JmRWljSn59gQ6l1pr"
+	private let twitterSecret = "opWxrGN1T8qPRMYF3iFiDZPGNiLmYrrQGWfUHfVKSaaY8YioYf"
+
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
+		Twitter.sharedInstance().startWithConsumerKey(twitterConsumerKey, consumerSecret: twitterSecret)
 		Fabric.with([Twitter.self])
 		return true
+	}
+
+	func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+		return Twitter.sharedInstance().application(app, openURL: url, options: options)
 	}
 
 	func applicationWillResignActive(application: UIApplication) {
