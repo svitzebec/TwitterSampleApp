@@ -12,7 +12,13 @@ import TwitterKit
 class TwitterHomeViewController: UITableViewController {
 
 	private var tweets = [TWTRTweet]()
+
+	// This variable is used for disabling the simultaneous loading of older tweets
+	// when scrolling to the bottom of the table view
 	private var isLoadingOlderTweets = false
+
+	// This variable serves as a 5 second blocker for loading older tweets when
+	// scrolling to the bottom of the table view
 	private var olderTweetsFetchBlocked = false
 
 	private var oldestTweetID: String? {
@@ -49,13 +55,15 @@ class TwitterHomeViewController: UITableViewController {
 	}
 
 	override func scrollViewDidScroll(scrollView: UIScrollView) {
+		// check if table view did scroll to the bottom
 		if tableView.contentOffset.y >= tableView.contentSize.height - tableView.frame.size.height {
-			// did scroll to the bottom of the table view
 
+			// check if loading is not in progress or it's not blocked by the timer
 			if !olderTweetsFetchBlocked && !isLoadingOlderTweets {
 				loadOlderTweets()
 			}
 
+			// schedule the old tweets loading blocking timer
 			if !olderTweetsFetchBlocked {
 				NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(olderTweetsTimerFinished), userInfo: nil, repeats: false)
 				olderTweetsFetchBlocked = true
