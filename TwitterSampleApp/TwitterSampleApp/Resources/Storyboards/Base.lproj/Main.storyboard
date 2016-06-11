@@ -23,42 +23,5 @@
             </objects>
             <point key="canvasLocation" x="1794" y="401"/>
         </scene>
-        <!--Twitter Feed View Controller-->
-        <scene sceneID="2iV-gJ-qO8">
-            <objects>
-                <viewController id="6o0-nq-Mxi" customClass="TwitterFeedViewController" customModule="TwitterSampleApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Vli-UU-BB7"/>
-                        <viewControllerLayoutGuide type="bottom" id="DY2-R9-fnd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Jfi-nk-cSV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="PSH-Ay-dl4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sBg-Ci-dtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3258" y="412"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="b07-bn-Qjc">
-            <objects>
-                <navigationController storyboardIdentifier="TwitterFeedViewController" automaticallyAdjustsScrollViewInsets="NO" id="jtz-DE-brf" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6AG-iT-e6f">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6o0-nq-Mxi" kind="relationship" relationship="rootViewController" id="sMY-mI-QO8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yBz-ca-71F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2491" y="418"/>
-        </scene>
     </scenes>
 </document>

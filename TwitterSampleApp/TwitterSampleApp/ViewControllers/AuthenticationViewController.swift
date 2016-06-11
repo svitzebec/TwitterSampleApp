@@ -17,6 +17,10 @@ class AuthenticationViewController: UIViewController {
 		setUpLoginButton()
 	}
 
+	// The TWTRLogInButton has built in authentication handling.
+	// There are multiple methods to perform the login.
+	// This button tries to log in the user with the defined system accounts
+	// and if that is not possible, it redirects the user to a web based authentication.
 	private func setUpLoginButton() {
 		let logInButton = TWTRLogInButton(logInCompletion: { session, error in
 			if let session = session {
