@@ -24,7 +24,7 @@ class DataAccessHandler {
 			return
 		}
 
-		var URLString = "https://api.twitter.com/1.1/statuses/home_timeline.json"
+		var URLString = Endpoints.endpointURL(.GetHomeTimeline)
 
 		if let oldestTweetID = oldestTweetID {
 			URLString.appendContentsOf("?max_id=\(oldestTweetID)")
